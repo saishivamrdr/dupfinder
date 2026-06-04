@@ -1,1 +1,2 @@
-# dupfindr
+-----------------M3-----------------
+1. *SCANCONFIG* :- Used record since it stores data and shouldnt change after i created it. Path directory refers to the folder which is to be scanned, long minsize is the minimum size of the file, boolean dryrun is like a preview of what would happen(true or false) before deletion happens(like a confirmation), boolean interactivedeleter is like the toggle switch(true or false) whether to delete the dup file or not, jsonreport is the location of the json report and htmlreport is the location of html report(both happens after deletion i.e, json stores the data of the file(s) and html stores the report of the deletion in a html format) 
