@@ -22,7 +22,17 @@ public final class ByteComparator {
         try(InputStream firstInput= Files.newInputStream(first);
             InputStream secondInput= Files.newInputStream(second)){
             int firstRead;
+
+            while((firstRead= firstInput.read(firstBuffer))!= -1){
+                int secondRead= secondInput.read(secondBuffer);
+                if(firstRead!= secondRead){
+                    return false;
+                }
+                if(!Arrays.equals(firstBuffer, 0, firstRead, secondBuffer, 0, secondRead)){
+                    return false;
+                }
+            }
+            return secondInput.read()== -1;
         }
     }
-
 }
